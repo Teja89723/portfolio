@@ -1,0 +1,93 @@
+/* Animated Gradient Background */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(-45deg, #1e3a8a, #2563eb, #0ea5e9, #38bdf8);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+    overflow-x: hidden;
+}
+
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+/* Floating Circles */
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    width: 300px;
+    height: 300px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    animation: float 8s infinite ease-in-out alternate;
+}
+
+body::before {
+    top: -100px;
+    left: -100px;
+}
+
+body::after {
+    bottom: -100px;
+    right: -100px;
+}
+
+@keyframes float {
+    from { transform: translateY(0px); }
+    to { transform: translateY(50px); }
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 40px;
+    color: white;
+}
+
+/* Profile Image */
+.profile-pic {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 4px solid white;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* Glass Card Effect */
+section {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    margin: 30px auto;
+    padding: 25px;
+    width: 80%;
+    border-radius: 15px;
+    color: white;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+
+section:hover {
+    transform: scale(1.03);
+}
+
+h2 {
+    color: #ffffff;
+    border-bottom: 2px solid white;
+    padding-bottom: 5px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
